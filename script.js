@@ -1,27 +1,53 @@
 const perguntas = [
 
 {
-
 pergunta:"Você quer ganhar dinheiro pela internet?",
-
 opcoes:["Sim","Muito","Com certeza"]
-
 },
 
 {
+pergunta:"Você já tentou ganhar dinheiro online?",
+opcoes:["Nunca","Algumas vezes","Sim"]
+},
 
-pergunta:"Você prefere trabalhar com:",
-
+{
+pergunta:"Você prefere trabalhar usando:",
 opcoes:["Celular","Computador","Os dois"]
-
 },
 
 {
-
-pergunta:"Quanto você quer ganhar por mês?",
-
+pergunta:"Quanto você gostaria de ganhar por mês?",
 opcoes:["R$500","R$2000","R$5000+"]
+},
 
+{
+pergunta:"Quantas horas por dia você pode dedicar?",
+opcoes:["1 hora","2 a 3 horas","Mais de 4 horas"]
+},
+
+{
+pergunta:"Você prefere trabalhar:",
+opcoes:["Em casa","De qualquer lugar","Não importa"]
+},
+
+{
+pergunta:"Você gosta de aprender coisas novas?",
+opcoes:["Sim","Muito","Sempre"]
+},
+
+{
+pergunta:"Você quer ter renda extra ou viver disso?",
+opcoes:["Renda extra","Talvez viver disso","Viver disso"]
+},
+
+{
+pergunta:"Você prefere ganhar dinheiro com:",
+opcoes:["Internet","Negócios digitais","Qualquer forma"]
+},
+
+{
+pergunta:"Você está pronto para começar hoje?",
+opcoes:["Sim","Com certeza","Agora mesmo"]
 }
 
 ]
