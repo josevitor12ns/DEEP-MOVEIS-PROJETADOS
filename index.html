@@ -1,71 +1,147 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>R.V. Empire</title>
-<link rel="stylesheet" href="style.css">
+<title>Descubra Agora</title>
+
+<style>
+
+body{
+font-family: Arial;
+background: linear-gradient(135deg,#000,#111);
+color:white;
+text-align:center;
+padding:40px;
+}
+
+.box{
+max-width:600px;
+margin:auto;
+background:#111;
+padding:30px;
+border-radius:10px;
+}
+
+button{
+background:#00ff88;
+border:none;
+padding:15px 30px;
+font-size:18px;
+cursor:pointer;
+border-radius:8px;
+margin-top:20px;
+}
+
+.opcao{
+display:block;
+background:#222;
+padding:15px;
+margin:10px;
+cursor:pointer;
+border-radius:8px;
+}
+
+</style>
 </head>
+
 <body>
 
-<nav class="navbar">
-    <div class="logo">R.V. EMPIRE</div>
+<div class="box" id="inicio">
 
-    <div class="menu" id="menu">
-        <a href="#sobre">Sobre</a>
-        <a href="#servicos">Serviços</a>
-        <a href="#contato" class="btn-nav">Começar</a>
-    </div>
+<h1>Descubra a Melhor Forma de Ganhar Dinheiro Online</h1>
 
-    <div class="menu-toggle" id="toggle">☰</div>
-</nav>
+<p>Responda esse quiz rápido</p>
 
-<header class="hero">
-    <div class="hero-content">
-        <h1>Construindo Impérios Digitais</h1>
-        <p>Marketing Digital • Produtos • Afiliados Kiwify</p>
-        <a href="#contato" class="btn-primary">COMEÇAR AGORA</a>
-    </div>
-</header>
+<button onclick="startQuiz()">Começar</button>
 
-<section id="sobre" class="section reveal">
-    <h2>Quem Somos</h2>
-    <p>
-        A R.V. Empire transforma ideias em negócios lucrativos
-        através de estratégias modernas e tráfego pago.
-    </p>
-</section>
+</div>
 
-<section id="servicos" class="section reveal">
-    <h2>Nossos Serviços</h2>
 
-    <div class="cards">
-        <div class="card">
-            <h3>Gestão de Tráfego</h3>
-            <p>Campanhas focadas em ROI real.</p>
-        </div>
+<div class="box" id="quiz" style="display:none">
 
-        <div class="card">
-            <h3>Criação de Produtos</h3>
-            <p>Produtos digitais estruturados para vendas.</p>
-        </div>
+<h2 id="pergunta"></h2>
 
-        <div class="card">
-            <h3>Afiliados Kiwify</h3>
-            <p>Escala profissional para afiliados.</p>
-        </div>
-    </div>
-</section>
+<div id="opcoes"></div>
 
-<section id="contato" class="section reveal">
-    <h2>Vamos Construir Seu Império</h2>
-    <a href="#" class="btn-secondary">Falar no WhatsApp</a>
-</section>
+</div>
 
-<footer>
-    © 2026 R.V. Empire
-</footer>
 
-<script src="script.js"></script>
+<div class="box" id="resultado" style="display:none">
+
+<h1>Resultado</h1>
+
+<p>Com base nas suas respostas, esse método é ideal para você.</p>
+
+<a href="SEU LINK DA KIWIFY">
+<button>ACESSAR AGORA</button>
+</a>
+
+</div>
+
+
+<script>
+
+const perguntas = [
+
+{
+pergunta:"Você quer ganhar dinheiro pela internet?",
+opcoes:["Sim","Quero muito","Com certeza"]
+},
+
+{
+pergunta:"Você prefere trabalhar com:",
+opcoes:["Celular","Computador","Qualquer um"]
+},
+
+{
+pergunta:"Você quer aprender rápido?",
+opcoes:["Sim","Claro","Muito"]
+}
+
+]
+
+let atual = 0
+
+function startQuiz(){
+document.getElementById("inicio").style.display="none"
+document.getElementById("quiz").style.display="block"
+mostrarPergunta()
+}
+
+function mostrarPergunta(){
+
+let p = perguntas[atual]
+
+document.getElementById("pergunta").innerText = p.pergunta
+
+let opcoesHTML=""
+
+p.opcoes.forEach(op=>{
+opcoesHTML += `<div class="opcao" onclick="proxima()">${op}</div>`
+})
+
+document.getElementById("opcoes").innerHTML = opcoesHTML
+
+}
+
+function proxima(){
+
+atual++
+
+if(atual < perguntas.length){
+
+mostrarPergunta()
+
+}else{
+
+document.getElementById("quiz").style.display="none"
+document.getElementById("resultado").style.display="block"
+
+}
+
+}
+
+</script>
+
 </body>
 </html>
