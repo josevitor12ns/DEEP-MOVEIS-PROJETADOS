@@ -36,7 +36,7 @@ opcoes:["Sim","Muito","Sempre"]
 },
 
 {
-pergunta:"Você quer ter renda extra ou viver disso?",
+pergunta:"Você quer renda extra ou viver disso?",
 opcoes:["Renda extra","Talvez viver disso","Viver disso"]
 },
 
@@ -46,8 +46,8 @@ opcoes:["Internet","Negócios digitais","Qualquer forma"]
 },
 
 {
-pergunta:"Você está pronto para começar hoje?",
-opcoes:["Sim","Com certeza","Agora mesmo"]
+pergunta:"Você está pronto para começar?",
+opcoes:["Sim","Claro","Agora mesmo"]
 }
 
 ]
@@ -57,7 +57,6 @@ let atual = 0
 function iniciar(){
 
 document.getElementById("inicio").style.display="none"
-
 document.getElementById("quiz").style.display="block"
 
 mostrar()
@@ -96,11 +95,16 @@ mostrar()
 
 }else{
 
-document.getElementById("barra").style.width="100%"
-
 document.getElementById("quiz").style.display="none"
 
+document.getElementById("carregando").style.display="block"
+
+setTimeout(function(){
+
+document.getElementById("carregando").style.display="none"
 document.getElementById("final").style.display="block"
+
+},3000)
 
 }
 
