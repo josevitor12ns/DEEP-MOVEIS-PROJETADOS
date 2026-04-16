@@ -1,69 +1,62 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
-
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Quiz Online</title>
-
-<link rel="stylesheet" href="style.css">
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deep Móveis Projetados</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-<div class="box">
+<header>
+    <h1>DEEP MÓVEIS</h1>
+    <nav>
+        <a href="#home">Início</a>
+        <a href="#sobre">Sobre</a>
+        <a href="#servicos">Serviços</a>
+        <a href="#galeria">Galeria</a>
+        <a href="#contato">Contato</a>
+    </nav>
+</header>
 
-<div class="progresso">
-<div class="barra" id="barra"></div>
-</div>
+<section id="home" class="banner">
+    <h2>Móveis Planejados de Alto Padrão</h2>
+    <p>Transformamos seu espaço com design moderno</p>
+    <button onclick="whatsapp()">Solicitar Orçamento</button>
+</section>
 
-<div id="inicio">
+<section id="sobre">
+    <h2>Sobre Nós</h2>
+    <p>Somos especialistas em móveis planejados, trazendo sofisticação e qualidade para seu ambiente.</p>
+</section>
 
-<h1>Descubra Como Ganhar Dinheiro Online</h1>
+<section id="servicos">
+    <h2>Nossos Serviços</h2>
+    <div class="cards">
+        <div class="card">Cozinhas Planejadas</div>
+        <div class="card">Guarda-Roupas</div>
+        <div class="card">Painéis e Racks</div>
+    </div>
+</section>
 
-<p>Responda esse quiz rápido</p>
+<section id="galeria">
+    <h2>Galeria</h2>
+    <div class="galeria">
+        <img src="img1.jpg">
+        <img src="img2.jpg">
+        <img src="img3.jpg">
+    </div>
+</section>
 
-<button onclick="iniciar()">COMEÇAR</button>
+<section id="contato">
+    <h2>Fale Conosco</h2>
+    <button onclick="whatsapp()">Chamar no WhatsApp</button>
+</section>
 
-</div>
-
-<div id="quiz" style="display:none">
-
-<h2 id="pergunta"></h2>
-
-<div id="opcoes"></div>
-
-</div>
-
-<div id="carregando" style="display:none">
-
-<h2>Analisando suas respostas...</h2>
-
-<div class="loader"></div>
-
-</div>
-
-<div id="final" style="display:none">
-
-<h1>Resultado</h1>
-
-<p>Encontramos o melhor método para você ganhar dinheiro online.</p>
-
-<a href="https://pay.kiwify.com.br/xSsIBce" target="_blank">
-
-<button>ACESSAR MÉTODO AGORA</button>
-
-</a>
-
-</div>
-
-</div>
+<footer>
+    <p>© 2026 Deep Móveis Projetados</p>
+</footer>
 
 <script src="script.js"></script>
-
 </body>
-
 </html>
