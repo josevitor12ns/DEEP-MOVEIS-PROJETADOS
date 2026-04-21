@@ -5,8 +5,15 @@
     font-family: Arial, sans-serif;
 }
 
+/* 🔥 FUNDO AUTOMÁTICO INSTAGRAM */
 body {
-    background: #0f0f0f;
+    background:
+        linear-gradient(rgba(0,0,0,0.9), rgba(0,0,0,0.95)),
+        url("https://unavatar.io/instagram/deepmoveis");
+
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
     color: #fff;
 }
 
@@ -14,18 +21,41 @@ body {
 header {
     display: flex;
     justify-content: space-between;
-    padding: 20px;
-    background: #000;
+    align-items: center;
+    padding: 15px 20px;
+    background: rgba(0,0,0,0.8);
+    backdrop-filter: blur(10px);
 }
 
 header h1 {
     color: #c59d5f;
 }
 
+/* MENU */
+nav {
+    display: flex;
+}
+
 nav a {
-    color: #fff;
     margin: 0 10px;
+    color: #fff;
     text-decoration: none;
+}
+
+/* BOTÃO INSTA */
+.insta-btn {
+    background: linear-gradient(45deg, #c59d5f, #a67c3b);
+    padding: 8px 15px;
+    border-radius: 20px;
+    color: #000;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* MENU MOBILE */
+.menu-toggle {
+    display: none;
+    font-size: 25px;
 }
 
 /* BANNER */
@@ -35,25 +65,17 @@ nav a {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background: linear-gradient(black, #111);
     text-align: center;
 }
 
 .banner h2 {
-    font-size: 40px;
-}
-
-.banner button {
-    margin-top: 20px;
-    padding: 10px 20px;
-    background: #c59d5f;
-    border: none;
-    cursor: pointer;
+    font-size: 42px;
+    color: #c59d5f;
 }
 
 /* SEÇÕES */
 section {
-    padding: 50px;
+    padding: 60px 20px;
     text-align: center;
 }
 
@@ -65,26 +87,56 @@ section {
 }
 
 .card {
-    background: #1a1a1a;
+    background: rgba(20,20,20,0.8);
+    border: 1px solid #c59d5f;
     padding: 20px;
     border-radius: 10px;
+    transition: 0.3s;
 }
 
-/* GALERIA */
-.galeria {
+.card:hover {
+    transform: scale(1.05);
+}
+
+/* GALERIA INSTAGRAM */
+.insta-feed {
     display: flex;
     justify-content: center;
-    gap: 10px;
 }
 
-.galeria img {
-    width: 250px;
-    border-radius: 10px;
+/* BOTÃO */
+button {
+    background: #c59d5f;
+    padding: 12px 25px;
+    border: none;
+    cursor: pointer;
 }
 
-/* FOOTER */
-footer {
-    background: #000;
-    padding: 20px;
-    text-align: center;
+/* RESPONSIVO */
+@media (max-width: 768px) {
+
+    nav {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        width: 100%;
+        background: #000;
+    }
+
+    nav a {
+        padding: 15px;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .cards {
+        flex-direction: column;
+    }
+
+    .banner h2 {
+        font-size: 28px;
+    }
 }

@@ -1,55 +1,72 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Deep Móveis Projetados</title>
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Deep Móveis Projetados</title>
+
+<link rel="stylesheet" href="style.css">
+
+<!-- Script oficial Instagram -->
+<script async src="//www.instagram.com/embed.js"></script>
+
 </head>
 <body>
 
 <header>
     <h1>DEEP MÓVEIS</h1>
-    <nav>
+
+    <nav id="menu">
         <a href="#home">Início</a>
         <a href="#sobre">Sobre</a>
         <a href="#servicos">Serviços</a>
         <a href="#galeria">Galeria</a>
         <a href="#contato">Contato</a>
     </nav>
+
+    <a href="https://www.instagram.com/deepmoveis" target="_blank" class="insta-btn">
+        Instagram
+    </a>
+
+    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
 </header>
 
 <section id="home" class="banner">
-    <h2>Móveis Projetados de Alto Padrão</h2>
-    <p>Transformamos seu espaço com design moderno</p>
+    <h2>Móveis Planejados de Alto Padrão</h2>
+    <p>Design moderno e sofisticação</p>
     <button onclick="whatsapp()">Solicitar Orçamento</button>
 </section>
 
 <section id="sobre">
     <h2>Sobre Nós</h2>
-    <p>Somos especialistas em móveis planejados, trazendo sofisticação e qualidade para seu ambiente.</p>
+    <p>Projetos personalizados com acabamento premium.</p>
 </section>
 
 <section id="servicos">
-    <h2>Nossos Serviços</h2>
+    <h2>Serviços</h2>
     <div class="cards">
-        <div class="card">Cozinhas Planejadas</div>
+        <div class="card">Cozinhas</div>
         <div class="card">Guarda-Roupas</div>
-        <div class="card">Painéis e Racks</div>
+        <div class="card">Painéis</div>
     </div>
 </section>
 
+<!-- 🔥 GALERIA AUTOMÁTICA -->
 <section id="galeria">
-    <h2>Galeria</h2>
-    <div class="galeria">
-        <img src="img1.jpg">
-        <img src="img2.jpg">
-        <img src="img3.jpg">
+    <h2>Nosso Instagram</h2>
+
+    <div class="insta-feed">
+
+        <blockquote class="instagram-media"
+        data-instgrm-permalink="https://www.instagram.com/deepmoveis/"
+        data-instgrm-version="14">
+        </blockquote>
+
     </div>
 </section>
 
 <section id="contato">
-    <h2>Fale Conosco</h2>
+    <h2>Contato</h2>
     <button onclick="whatsapp()">Chamar no WhatsApp</button>
 </section>
 

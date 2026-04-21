@@ -1,7 +1,10 @@
 function whatsapp() {
-    let numero = "558386477047"; // coloca o número real
-    let mensagem = "Olá, quero um orçamento de móveis planejados!";
-    let url = `https://wa.me/${numero}?text=${encodeURIComponent(mensagem)}`;
-    
-    window.open(url, "_blank");
+    let numero = "5583999999999";
+    let mensagem = "Olá, quero um orçamento!";
+    window.open(`https://wa.me/${numero}?text=${encodeURIComponent(mensagem)}`);
+}
+
+function toggleMenu() {
+    let menu = document.getElementById("menu");
+    menu.style.display = menu.style.display === "flex" ? "none" : "flex";
 }
