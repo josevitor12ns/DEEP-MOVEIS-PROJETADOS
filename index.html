@@ -2,6 +2,7 @@
 <html lang="pt-br">
 <head>
 
+<!-- 🔥 VERIFICAÇÃO GOOGLE -->
 <meta name="google-site-verification" content="T0j4L5mA_GuFK-uD1hQH-VHAxauckWr3t1lDWgxKvNw" />
 
 <meta charset="UTF-8">
@@ -13,32 +14,24 @@
 
 <link rel="stylesheet" href="style.css">
 
-<script async src="//www.instagram.com/embed.js"></script>
-
 </head>
 <body>
 
-<header>
-    <img src="logo.png" class="logo">
+<div class="container">
 
+<header>
+    <img src="logo.png" class="logo" alt="DEEP MÓVEIS PROJETADOS">
+    
     <nav id="menu">
         <a href="#home">Início</a>
         <a href="#sobre">Sobre</a>
         <a href="#servicos">Serviços</a>
-        <a href="#galeria">Galeria</a>
         <a href="#contato">Contato</a>
     </nav>
-
-    <a href="https://www.instagram.com/deepmoveis" target="_blank" class="insta-btn">
-        Instagram
-    </a>
-
-    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
 </header>
 
 <section id="home" class="banner">
-    <img src="logo.png" class="logo-banner">
-    <h2>Móveis Planejados em João Pessoa</h2>
+    <h1>Móveis Planejados em João Pessoa</h1>
     <p>Projetos sob medida com alto padrão</p>
     <button onclick="whatsapp()">Solicitar Orçamento</button>
 </section>
@@ -60,15 +53,6 @@
     </div>
 </section>
 
-<section id="galeria">
-    <h2>Nosso Instagram</h2>
-    <div class="insta-feed">
-        <blockquote class="instagram-media"
-        data-instgrm-permalink="https://www.instagram.com/deepmoveis/"
-        data-instgrm-version="14"></blockquote>
-    </div>
-</section>
-
 <section id="contato">
     <h2>Contato</h2>
     <button onclick="whatsapp()">Chamar no WhatsApp</button>
@@ -78,13 +62,11 @@
     <p>© 2026 DEEP MÓVEIS PROJETADOS</p>
 </footer>
 
+</div>
+
 <script>
 function whatsapp() {
     window.open("https://wa.me/5583000000000?text=Olá,%20quero%20um%20orçamento", "_blank");
-}
-
-function toggleMenu() {
-    document.getElementById("menu").classList.toggle("active");
 }
 </script>
 
