@@ -1,42 +1,28 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, sans-serif;
-}
-
-/* 🔥 FUNDO AUTOMÁTICO INSTAGRAM */
 body {
-    background:
-        linear-gradient(rgba(0,0,0,0.9), rgba(0,0,0,0.95)),
-        url("https://unavatar.io/instagram/deepmoveis");
-
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #3f5a46;
     color: #fff;
 }
 
 /* HEADER */
 header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 20px;
-    background: rgba(0,0,0,0.8);
-    backdrop-filter: blur(10px);
+    text-align: center;
+    padding: 20px;
 }
 
-header h1 {
-    color: #c59d5f;
+/* LOGO TOPO */
+.logo {
+    width: 260px;
+    max-width: 90%;
 }
 
 /* MENU */
-nav {
-    display: flex;
+#menu {
+    margin: 15px 0;
 }
 
-nav a {
+#menu a {
     margin: 0 10px;
     color: #fff;
     text-decoration: none;
@@ -44,99 +30,73 @@ nav a {
 
 /* BOTÃO INSTA */
 .insta-btn {
-    background: linear-gradient(45deg, #c59d5f, #a67c3b);
-    padding: 8px 15px;
-    border-radius: 20px;
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 15px;
+    background: #e6c2a6;
     color: #000;
     text-decoration: none;
-    font-weight: bold;
-}
-
-/* MENU MOBILE */
-.menu-toggle {
-    display: none;
-    font-size: 25px;
 }
 
 /* BANNER */
 .banner {
-    height: 90vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
     text-align: center;
+    padding: 50px 20px;
 }
 
-.banner h2 {
-    font-size: 42px;
-    color: #c59d5f;
+/* LOGO GRANDE */
+.logo-banner {
+    width: 350px;
+    max-width: 90%;
+    margin-bottom: 20px;
 }
 
-/* SEÇÕES */
-section {
-    padding: 60px 20px;
-    text-align: center;
+/* BOTÃO */
+button {
+    padding: 12px 20px;
+    background: #e6c2a6;
+    border: none;
+    cursor: pointer;
 }
 
 /* CARDS */
 .cards {
     display: flex;
     justify-content: center;
-    gap: 20px;
+    gap: 10px;
+    flex-wrap: wrap;
 }
 
 .card {
-    background: rgba(20,20,20,0.8);
-    border: 1px solid #c59d5f;
+    background: #e6c2a6;
+    color: #000;
     padding: 20px;
-    border-radius: 10px;
-    transition: 0.3s;
 }
 
-.card:hover {
-    transform: scale(1.05);
+/* RODAPÉ */
+footer {
+    text-align: center;
+    padding: 20px;
 }
 
-/* GALERIA INSTAGRAM */
-.insta-feed {
-    display: flex;
-    justify-content: center;
+/* MOBILE */
+.menu-toggle {
+    display: none;
 }
 
-/* BOTÃO */
-button {
-    background: #c59d5f;
-    padding: 12px 25px;
-    border: none;
-    cursor: pointer;
-}
-
-/* RESPONSIVO */
 @media (max-width: 768px) {
-
-    nav {
+    #menu {
         display: none;
         flex-direction: column;
-        position: absolute;
-        top: 60px;
-        width: 100%;
-        background: #000;
     }
 
-    nav a {
-        padding: 15px;
+    #menu.active {
+        display: flex;
     }
 
     .menu-toggle {
         display: block;
-    }
-
-    .cards {
-        flex-direction: column;
-    }
-
-    .banner h2 {
-        font-size: 28px;
+        font-size: 25px;
+        cursor: pointer;
     }
 }
