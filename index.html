@@ -9,11 +9,8 @@
 
 <title>Móveis Planejados em João Pessoa | DEEP MÓVEIS PROJETADOS</title>
 
-<meta name="description" content="Móveis planejados em João Pessoa com alto padrão. Solicite seu orçamento agora!">
-
 <link rel="stylesheet" href="style.css">
 
-<!-- Ícones -->
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
 
 </head>
@@ -24,47 +21,53 @@
 
     <nav>
         <a href="#home">Início</a>
-        <a href="#sobre">Sobre</a>
         <a href="#servicos">Serviços</a>
         <a href="#contato">Contato</a>
     </nav>
 </header>
 
-<section id="home" class="banner">
-    <div class="overlay">
-        <h1>Móveis Planejados em João Pessoa</h1>
-        <p>Design moderno • Alto padrão • Sob medida</p>
+<section class="hero">
+
+    <div class="hero-content">
+        <h1>Móveis Planejados de Alto Padrão</h1>
+        <p>Transformamos seu ambiente com design moderno e exclusivo</p>
 
         <div class="botoes">
-            <button onclick="whatsapp()">Orçamento</button>
+            <button onclick="whatsapp()">Solicitar Orçamento</button>
 
-            <a href="https://www.instagram.com/deepmoveis" target="_blank" class="insta">
+            <a href="https://www.instagram.com/deepmoveis" target="_blank">
                 <i class="fab fa-instagram"></i> Instagram
             </a>
         </div>
     </div>
-</section>
 
-<section id="sobre">
-    <h2>Sobre Nós</h2>
-    <p>
-    Especialistas em móveis planejados em João Pessoa.
-    Projetos personalizados com acabamento premium.
-    </p>
 </section>
 
 <section id="servicos">
-    <h2>Serviços</h2>
+
+    <h2>O que fazemos</h2>
 
     <div class="cards">
-        <div class="card">Cozinhas Planejadas</div>
-        <div class="card">Guarda-Roupas</div>
-        <div class="card">Painéis e Ambientes</div>
+        <div class="card">
+            <i class="fas fa-kitchen-set"></i>
+            <h3>Cozinhas Planejadas</h3>
+        </div>
+
+        <div class="card">
+            <i class="fas fa-bed"></i>
+            <h3>Guarda-Roupas</h3>
+        </div>
+
+        <div class="card">
+            <i class="fas fa-tv"></i>
+            <h3>Painéis e Ambientes</h3>
+        </div>
     </div>
+
 </section>
 
 <section id="contato">
-    <h2>Contato</h2>
+    <h2>Fale Conosco</h2>
     <button onclick="whatsapp()">Chamar no WhatsApp</button>
 </section>
 
@@ -72,14 +75,13 @@
     <p>© 2026 DEEP MÓVEIS PROJETADOS</p>
 </footer>
 
-<!-- BOTÃO FLUTUANTE -->
-<a href="https://wa.me/5583000000000" class="whatsapp-float" target="_blank">
+<a href="https://wa.me/5583000000000" class="whatsapp">
     <i class="fab fa-whatsapp"></i>
 </a>
 
 <script>
-function whatsapp() {
-    window.open("https://wa.me/5583000000000?text=Olá,%20quero%20um%20orçamento", "_blank");
+function whatsapp(){
+    window.open("https://wa.me/5583000000000","_blank")
 }
 </script>
 
