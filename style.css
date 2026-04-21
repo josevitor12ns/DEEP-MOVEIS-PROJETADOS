@@ -14,13 +14,15 @@ header{
     background:#1e2d24;
 }
 
-.logo{
-    width:130px;
+.logo-text{
+    font-size:20px;
+    font-weight:bold;
+    color:#e6c2a6;
 }
 
 nav a{
-    color:#fff;
     margin-left:15px;
+    color:#fff;
     text-decoration:none;
 }
 
@@ -33,54 +35,53 @@ nav a{
     justify-content:center;
 }
 
-.hero-content{
+.overlay{
     background:rgba(0,0,0,0.6);
     padding:40px;
     border-radius:15px;
     text-align:center;
 }
 
-/* BOTÕES */
-.botoes button{
-    background:#e6c2a6;
-    border:none;
-    padding:12px 20px;
-    margin:10px;
-    cursor:pointer;
-}
-
-.botoes a{
-    background:#E1306C;
-    color:#fff;
-    padding:12px 20px;
-    text-decoration:none;
+/* SEÇÕES */
+section{
+    padding:60px 20px;
+    text-align:center;
 }
 
 /* CARDS */
 .cards{
     display:flex;
-    justify-content:center;
     gap:20px;
+    justify-content:center;
     flex-wrap:wrap;
 }
 
 .card{
     background:#1e2d24;
-    padding:30px;
+    padding:25px;
     border-radius:15px;
-    text-align:center;
     width:250px;
-    transition:0.3s;
 }
 
-.card:hover{
-    transform:scale(1.05);
+/* GALERIA */
+.galeria{
+    display:flex;
+    gap:15px;
+    justify-content:center;
+    flex-wrap:wrap;
 }
 
-/* CONTATO */
-section{
-    padding:60px 20px;
-    text-align:center;
+.galeria img{
+    width:300px;
+    border-radius:10px;
+}
+
+/* BOTÃO */
+button{
+    background:#e6c2a6;
+    border:none;
+    padding:12px 20px;
+    cursor:pointer;
 }
 
 /* WHATSAPP */
@@ -91,11 +92,11 @@ section{
     background:#25D366;
     padding:15px;
     border-radius:50%;
-    color:#fff;
 }
 
 /* MOBILE */
 @media(max-width:768px){
+
     header{
         flex-direction:column;
     }
@@ -103,4 +104,13 @@ section{
     .hero{
         height:70vh;
     }
+
+    .card{
+        width:100%;
+    }
+
+    .galeria img{
+        width:100%;
+    }
+
 }

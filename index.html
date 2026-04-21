@@ -7,7 +7,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Móveis Planejados em João Pessoa | DEEP MÓVEIS PROJETADOS</title>
+<title>DEEP MÓVEIS PROJETADOS | João Pessoa</title>
 
 <link rel="stylesheet" href="style.css">
 
@@ -16,60 +16,90 @@
 </head>
 <body>
 
+<!-- HEADER -->
 <header>
-    <img src="logo.png" class="logo">
+
+    <div class="logo-text">
+        DEEP MÓVEIS
+    </div>
 
     <nav>
         <a href="#home">Início</a>
-        <a href="#servicos">Serviços</a>
+        <a href="#trabalho">Como Trabalhamos</a>
+        <a href="#materiais">Materiais</a>
+        <a href="#galeria">Projetos</a>
         <a href="#contato">Contato</a>
     </nav>
+
 </header>
 
-<section class="hero">
-
-    <div class="hero-content">
+<!-- HERO -->
+<section id="home" class="hero">
+    <div class="overlay">
         <h1>Móveis Planejados de Alto Padrão</h1>
-        <p>Transformamos seu ambiente com design moderno e exclusivo</p>
+        <p>Design moderno • Sob medida • Qualidade premium</p>
 
-        <div class="botoes">
-            <button onclick="whatsapp()">Solicitar Orçamento</button>
-
-            <a href="https://www.instagram.com/deepmoveis" target="_blank">
-                <i class="fab fa-instagram"></i> Instagram
-            </a>
-        </div>
+        <button onclick="whatsapp()">Solicitar Orçamento</button>
     </div>
-
 </section>
 
-<section id="servicos">
-
-    <h2>O que fazemos</h2>
+<!-- COMO TRABALHAMOS -->
+<section id="trabalho">
+    <h2>Como Trabalhamos</h2>
 
     <div class="cards">
+
         <div class="card">
-            <i class="fas fa-kitchen-set"></i>
-            <h3>Cozinhas Planejadas</h3>
+            <h3>1. Planejamento</h3>
+            <p>Analisamos seu espaço e criamos um projeto personalizado.</p>
         </div>
 
         <div class="card">
-            <i class="fas fa-bed"></i>
-            <h3>Guarda-Roupas</h3>
+            <h3>2. Produção</h3>
+            <p>Utilizamos materiais de alta qualidade com acabamento profissional.</p>
         </div>
 
         <div class="card">
-            <i class="fas fa-tv"></i>
-            <h3>Painéis e Ambientes</h3>
+            <h3>3. Instalação</h3>
+            <p>Montagem rápida e eficiente com garantia de satisfação.</p>
         </div>
+
     </div>
+</section>
 
+<!-- MATERIAIS -->
+<section id="materiais">
+    <h2>Materiais de Qualidade</h2>
+
+    <div class="cards">
+        <div class="card">MDF Premium</div>
+        <div class="card">Madeira Tratada</div>
+        <div class="card">Acabamento de Alto Padrão</div>
+    </div>
+</section>
+
+<!-- GALERIA -->
+<section id="galeria">
+    <h2>Nossos Projetos</h2>
+
+    <div class="galeria">
+        <img src="foto1.jpg">
+        <img src="foto2.jpg">
+        <img src="foto3.jpg">
+    </div>
+</section>
+
+<!-- CONTATO -->
+<section id="contato">
+    <h2>Fale Conosco</h2>
+    <button onclick="whatsapp()">Chamar no WhatsApp</button>
 </section>
 
 <footer>
     <p>© 2026 DEEP MÓVEIS PROJETADOS</p>
 </footer>
 
+<!-- WHATSAPP -->
 <a href="https://wa.me/5583000000000" class="whatsapp">
     <i class="fab fa-whatsapp"></i>
 </a>
