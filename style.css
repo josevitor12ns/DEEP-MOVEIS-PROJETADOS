@@ -1,47 +1,54 @@
 body {
     margin: 0;
-    font-family: Arial;
-    background: #3E5A47; /* verde da logo */
-    color: #F2D2B6; /* bege da logo */
+    font-family: Arial, sans-serif;
+    color: #F2D2B6;
+
+    /* 🔥 FUNDO FIXO */
+    background: url("logo.png") no-repeat center center fixed;
+    background-size: cover;
+}
+
+/* CAMADA ESCURA (EFEITO PROFISSIONAL) */
+.overlay {
+    background: rgba(0, 0, 0, 0.7);
+    min-height: 100vh;
+}
+
+/* CONTEÚDO CENTRALIZADO */
+.container {
+    max-width: 1100px;
+    margin: auto;
+    padding: 20px;
 }
 
 /* HEADER */
 header {
     text-align: center;
-    padding: 20px;
 }
 
 /* LOGO */
 .logo {
-    width: 260px;
+    width: 220px;
+    margin-bottom: 10px;
 }
 
 /* MENU */
-#menu a {
-    color: #F2D2B6;
-    margin: 10px;
-    text-decoration: none;
+#menu {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
 }
 
-/* BOTÃO INSTA */
-.insta-btn {
-    background: #F2D2B6;
-    color: #3E5A47;
-    padding: 10px;
-    display: inline-block;
-    margin-top: 10px;
+#menu a {
+    color: #F2D2B6;
+    text-decoration: none;
 }
 
 /* BANNER */
 .banner {
     text-align: center;
-    padding: 50px 20px;
-}
-
-/* LOGO GRANDE */
-.logo-banner {
-    width: 350px;
-    margin-bottom: 20px;
+    padding: 60px 20px;
 }
 
 /* BOTÃO */
@@ -51,23 +58,49 @@ button {
     padding: 12px 20px;
     border: none;
     cursor: pointer;
+    border-radius: 5px;
 }
 
 /* CARDS */
 .cards {
     display: flex;
     justify-content: center;
-    gap: 10px;
+    gap: 15px;
+    flex-wrap: wrap;
 }
 
 .card {
-    background: #F2D2B6;
+    background: rgba(255,255,255,0.9);
     color: #3E5A47;
     padding: 20px;
+    border-radius: 10px;
+    min-width: 200px;
+}
+
+/* SEÇÕES */
+section {
+    text-align: center;
+    margin-top: 40px;
 }
 
 /* FOOTER */
 footer {
     text-align: center;
-    padding: 20px;
+    margin-top: 40px;
+}
+
+/* 📱 RESPONSIVO */
+@media (max-width: 768px) {
+
+    .logo {
+        width: 160px;
+    }
+
+    h1 {
+        font-size: 22px;
+    }
+
+    .card {
+        width: 100%;
+    }
 }
