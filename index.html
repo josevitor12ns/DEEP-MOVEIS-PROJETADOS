@@ -13,17 +13,16 @@
 
 <link rel="stylesheet" href="style.css">
 
+<!-- Ícones -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+
 </head>
 <body>
 
-<div class="overlay">
-
-<div class="container">
-
 <header>
-    <img src="logo.png" class="logo" alt="DEEP MÓVEIS PROJETADOS">
-    
-    <nav id="menu">
+    <img src="logo.png" class="logo">
+
+    <nav>
         <a href="#home">Início</a>
         <a href="#sobre">Sobre</a>
         <a href="#servicos">Serviços</a>
@@ -32,25 +31,35 @@
 </header>
 
 <section id="home" class="banner">
-    <h1>Móveis Planejados em João Pessoa</h1>
-    <p>Projetos sob medida com alto padrão</p>
-    <button onclick="whatsapp()">Solicitar Orçamento</button>
+    <div class="overlay">
+        <h1>Móveis Planejados em João Pessoa</h1>
+        <p>Design moderno • Alto padrão • Sob medida</p>
+
+        <div class="botoes">
+            <button onclick="whatsapp()">Orçamento</button>
+
+            <a href="https://www.instagram.com/deepmoveis" target="_blank" class="insta">
+                <i class="fab fa-instagram"></i> Instagram
+            </a>
+        </div>
+    </div>
 </section>
 
 <section id="sobre">
     <h2>Sobre Nós</h2>
     <p>
-    A DEEP MÓVEIS PROJETADOS é especialista em móveis planejados em João Pessoa,
-    com projetos modernos e personalizados.
+    Especialistas em móveis planejados em João Pessoa.
+    Projetos personalizados com acabamento premium.
     </p>
 </section>
 
 <section id="servicos">
     <h2>Serviços</h2>
+
     <div class="cards">
         <div class="card">Cozinhas Planejadas</div>
         <div class="card">Guarda-Roupas</div>
-        <div class="card">Painéis</div>
+        <div class="card">Painéis e Ambientes</div>
     </div>
 </section>
 
@@ -63,9 +72,10 @@
     <p>© 2026 DEEP MÓVEIS PROJETADOS</p>
 </footer>
 
-</div>
-
-</div>
+<!-- BOTÃO FLUTUANTE -->
+<a href="https://wa.me/5583000000000" class="whatsapp-float" target="_blank">
+    <i class="fab fa-whatsapp"></i>
+</a>
 
 <script>
 function whatsapp() {
