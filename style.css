@@ -1,66 +1,86 @@
 body{
     margin:0;
-    font-family: Arial;
-    background:#0f1a14;
+    font-family: 'Segoe UI', sans-serif;
+    background:#0b0f0c;
     color:#fff;
 }
 
-/* HEADER */
+/* HEADER FIXO */
 header{
+    position:fixed;
+    width:100%;
+    top:0;
     display:flex;
     justify-content:space-between;
-    align-items:center;
-    padding:15px 30px;
-    background:#1e2d24;
+    padding:20px 40px;
+    background:rgba(0,0,0,0.6);
+    backdrop-filter:blur(10px);
+    z-index:1000;
 }
 
-.logo-text{
+.logo{
     font-size:20px;
-    font-weight:bold;
     color:#e6c2a6;
+    font-weight:bold;
 }
 
 nav a{
-    margin-left:15px;
+    margin-left:20px;
     color:#fff;
     text-decoration:none;
 }
 
 /* HERO */
 .hero{
-    height:90vh;
+    height:100vh;
     background:url("fundo.jpg") center/cover no-repeat;
     display:flex;
     align-items:center;
     justify-content:center;
 }
 
-.overlay{
-    background:rgba(0,0,0,0.6);
-    padding:40px;
-    border-radius:15px;
+.hero-content{
     text-align:center;
+    background:rgba(0,0,0,0.5);
+    padding:50px;
+    border-radius:20px;
+}
+
+/* BOTÃO */
+button{
+    background:#e6c2a6;
+    border:none;
+    padding:15px 25px;
+    cursor:pointer;
+    margin-top:20px;
+    font-size:16px;
 }
 
 /* SEÇÕES */
 section{
-    padding:60px 20px;
+    padding:100px 20px;
     text-align:center;
 }
 
-/* CARDS */
+/* CARDS GLASS */
 .cards{
     display:flex;
-    gap:20px;
     justify-content:center;
+    gap:20px;
     flex-wrap:wrap;
 }
 
 .card{
-    background:#1e2d24;
-    padding:25px;
-    border-radius:15px;
+    background:rgba(255,255,255,0.05);
+    backdrop-filter:blur(10px);
+    padding:30px;
+    border-radius:20px;
     width:250px;
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:translateY(-10px);
 }
 
 /* GALERIA */
@@ -73,15 +93,12 @@ section{
 
 .galeria img{
     width:300px;
-    border-radius:10px;
+    border-radius:15px;
+    transition:0.3s;
 }
 
-/* BOTÃO */
-button{
-    background:#e6c2a6;
-    border:none;
-    padding:12px 20px;
-    cursor:pointer;
+.galeria img:hover{
+    transform:scale(1.05);
 }
 
 /* WHATSAPP */
@@ -102,7 +119,7 @@ button{
     }
 
     .hero{
-        height:70vh;
+        height:80vh;
     }
 
     .card{
@@ -112,5 +129,4 @@ button{
     .galeria img{
         width:100%;
     }
-
 }
