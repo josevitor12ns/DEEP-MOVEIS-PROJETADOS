@@ -1,8 +1,8 @@
 body {
     margin: 0;
-    font-family: Arial, sans-serif;
-    background: #3f5a46;
-    color: #fff;
+    font-family: Arial;
+    background: #3E5A47; /* verde da logo */
+    color: #F2D2B6; /* bege da logo */
 }
 
 /* HEADER */
@@ -11,31 +11,25 @@ header {
     padding: 20px;
 }
 
-/* LOGO TOPO */
+/* LOGO */
 .logo {
     width: 260px;
-    max-width: 90%;
 }
 
 /* MENU */
-#menu {
-    margin: 15px 0;
-}
-
 #menu a {
-    margin: 0 10px;
-    color: #fff;
+    color: #F2D2B6;
+    margin: 10px;
     text-decoration: none;
 }
 
 /* BOTÃO INSTA */
 .insta-btn {
+    background: #F2D2B6;
+    color: #3E5A47;
+    padding: 10px;
     display: inline-block;
     margin-top: 10px;
-    padding: 10px 15px;
-    background: #e6c2a6;
-    color: #000;
-    text-decoration: none;
 }
 
 /* BANNER */
@@ -47,14 +41,14 @@ header {
 /* LOGO GRANDE */
 .logo-banner {
     width: 350px;
-    max-width: 90%;
     margin-bottom: 20px;
 }
 
 /* BOTÃO */
 button {
+    background: #F2D2B6;
+    color: #3E5A47;
     padding: 12px 20px;
-    background: #e6c2a6;
     border: none;
     cursor: pointer;
 }
@@ -64,39 +58,16 @@ button {
     display: flex;
     justify-content: center;
     gap: 10px;
-    flex-wrap: wrap;
 }
 
 .card {
-    background: #e6c2a6;
-    color: #000;
+    background: #F2D2B6;
+    color: #3E5A47;
     padding: 20px;
 }
 
-/* RODAPÉ */
+/* FOOTER */
 footer {
     text-align: center;
     padding: 20px;
-}
-
-/* MOBILE */
-.menu-toggle {
-    display: none;
-}
-
-@media (max-width: 768px) {
-    #menu {
-        display: none;
-        flex-direction: column;
-    }
-
-    #menu.active {
-        display: flex;
-    }
-
-    .menu-toggle {
-        display: block;
-        font-size: 25px;
-        cursor: pointer;
-    }
 }

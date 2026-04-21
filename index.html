@@ -19,8 +19,8 @@
 <body>
 
 <header>
-    <img src="logo.png" alt="DEEP MÓVEIS PROJETADOS" class="logo">
-    
+    <img src="logo.png" class="logo">
+
     <nav id="menu">
         <a href="#home">Início</a>
         <a href="#sobre">Sobre</a>
@@ -37,13 +37,10 @@
 </header>
 
 <section id="home" class="banner">
-
     <img src="logo.png" class="logo-banner">
-
     <h2>Móveis Planejados em João Pessoa</h2>
     <p>Projetos sob medida com alto padrão</p>
     <button onclick="whatsapp()">Solicitar Orçamento</button>
-
 </section>
 
 <section id="sobre">
@@ -65,13 +62,11 @@
 
 <section id="galeria">
     <h2>Nosso Instagram</h2>
-
     <div class="insta-feed">
         <blockquote class="instagram-media"
         data-instgrm-permalink="https://www.instagram.com/deepmoveis/"
         data-instgrm-version="14"></blockquote>
     </div>
-
 </section>
 
 <section id="contato">
@@ -89,8 +84,7 @@ function whatsapp() {
 }
 
 function toggleMenu() {
-    const menu = document.getElementById("menu");
-    menu.classList.toggle("active");
+    document.getElementById("menu").classList.toggle("active");
 }
 </script>
 
