@@ -1,132 +1,159 @@
-body{
-    margin:0;
-    font-family: 'Segoe UI', sans-serif;
-    background:#0b0f0c;
-    color:#fff;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
 }
 
-/* HEADER FIXO */
-header{
-    position:fixed;
-    width:100%;
-    top:0;
-    display:flex;
-    justify-content:space-between;
-    padding:20px 40px;
-    background:rgba(0,0,0,0.6);
-    backdrop-filter:blur(10px);
-    z-index:1000;
+/* 🔥 FUNDO COM TUA IMAGEM */
+body {
+    background:
+        linear-gradient(rgba(0,0,0,0.85), rgba(0,0,0,0.95)),
+        url("fundo.jpg");
+
+    background-size: cover;
+    background-position: right center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+    color: #fff;
 }
 
-.logo{
-    font-size:20px;
-    color:#e6c2a6;
-    font-weight:bold;
+/* HEADER */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background: rgba(0,0,0,0.8);
+    backdrop-filter: blur(10px);
 }
 
-nav a{
-    margin-left:20px;
-    color:#fff;
-    text-decoration:none;
+header h1 {
+    color: #c59d5f;
 }
 
-/* HERO */
-.hero{
-    height:100vh;
-    background:url("fundo.jpg") center/cover no-repeat;
-    display:flex;
-    align-items:center;
-    justify-content:center;
+/* MENU */
+nav {
+    display: flex;
 }
 
-.hero-content{
-    text-align:center;
-    background:rgba(0,0,0,0.5);
-    padding:50px;
-    border-radius:20px;
+nav a {
+    margin: 0 10px;
+    color: #fff;
+    text-decoration: none;
 }
 
-/* BOTÃO */
-button{
-    background:#e6c2a6;
-    border:none;
-    padding:15px 25px;
-    cursor:pointer;
-    margin-top:20px;
-    font-size:16px;
+/* BOTÃO INSTAGRAM */
+.insta-btn {
+    background: linear-gradient(45deg, #c59d5f, #a67c3b);
+    padding: 8px 15px;
+    border-radius: 20px;
+    color: #000;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* MENU MOBILE */
+.menu-toggle {
+    display: none;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+/* BANNER */
+.banner {
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    backdrop-filter: blur(2px);
+}
+
+.banner h2 {
+    font-size: 42px;
+    color: #c59d5f;
+}
+
+.banner p {
+    margin-top: 10px;
+}
+
+button {
+    margin-top: 20px;
+    padding: 12px 25px;
+    background: #c59d5f;
+    border: none;
+    cursor: pointer;
 }
 
 /* SEÇÕES */
-section{
-    padding:100px 20px;
-    text-align:center;
+section {
+    padding: 60px 20px;
+    text-align: center;
 }
 
-/* CARDS GLASS */
-.cards{
-    display:flex;
-    justify-content:center;
-    gap:20px;
-    flex-wrap:wrap;
+/* CARDS */
+.cards {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
 }
 
-.card{
-    background:rgba(255,255,255,0.05);
-    backdrop-filter:blur(10px);
-    padding:30px;
-    border-radius:20px;
-    width:250px;
-    transition:0.3s;
+.card {
+    background: rgba(20,20,20,0.8);
+    border: 1px solid #c59d5f;
+    padding: 20px;
+    border-radius: 10px;
+    transition: 0.3s;
 }
 
-.card:hover{
-    transform:translateY(-10px);
+.card:hover {
+    transform: scale(1.05);
 }
 
-/* GALERIA */
-.galeria{
-    display:flex;
-    gap:15px;
-    justify-content:center;
-    flex-wrap:wrap;
+/* FOOTER */
+footer {
+    background: rgba(0,0,0,0.8);
+    padding: 20px;
 }
 
-.galeria img{
-    width:300px;
-    border-radius:15px;
-    transition:0.3s;
-}
+/* 📱 RESPONSIVO */
+@media (max-width: 768px) {
 
-.galeria img:hover{
-    transform:scale(1.05);
-}
-
-/* WHATSAPP */
-.whatsapp{
-    position:fixed;
-    bottom:20px;
-    right:20px;
-    background:#25D366;
-    padding:15px;
-    border-radius:50%;
-}
-
-/* MOBILE */
-@media(max-width:768px){
-
-    header{
-        flex-direction:column;
+    nav {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background: #000;
     }
 
-    .hero{
-        height:80vh;
+    nav a {
+        padding: 15px;
+        border-top: 1px solid #222;
     }
 
-    .card{
-        width:100%;
+    .menu-toggle {
+        display: block;
     }
 
-    .galeria img{
-        width:100%;
+    .cards {
+        flex-direction: column;
+    }
+
+    .banner h2 {
+        font-size: 28px;
+    }
+
+    /* 🔥 AJUSTE FUNDO NO CELULAR */
+    body {
+        background-position: right center;
+        background-attachment: scroll;
     }
 }

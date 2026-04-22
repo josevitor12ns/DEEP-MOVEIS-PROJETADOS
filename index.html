@@ -1,81 +1,61 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-
-<meta name="google-site-verification" content="T0j4L5mA_GuFK-uD1hQH-VHAxauckWr3t1lDWgxKvNw" />
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>DEEP MÓVEIS PROJETADOS | Alto Padrão em João Pessoa</title>
+<title>Deep Móveis Projetados</title>
 
 <link rel="stylesheet" href="style.css">
-
-<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
 
 </head>
 <body>
 
 <header>
-    <div class="logo">DEEP MÓVEIS</div>
+    <h1>DEEP</h1>
 
-    <nav>
+    <nav id="menu">
         <a href="#home">Início</a>
+        <a href="#sobre">Sobre</a>
         <a href="#servicos">Serviços</a>
-        <a href="#galeria">Projetos</a>
         <a href="#contato">Contato</a>
     </nav>
+
+    <a href="https://www.instagram.com/deepmoveis" target="_blank" class="insta-btn">
+        Instagram
+    </a>
+
+    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
 </header>
 
-<section id="home" class="hero">
+<section id="home" class="banner">
+    <h2>Móveis Projetados de Alto Padrão</h2>
+    <p>Design moderno e sofisticação para seu ambiente</p>
+    <button onclick="whatsapp()">Solicitar Orçamento</button>
+</section>
 
-    <div class="hero-content">
-        <h1>Elegância em Cada Detalhe</h1>
-        <p>Móveis planejados de alto padrão em João Pessoa</p>
-
-        <button onclick="whatsapp()">Solicitar Orçamento</button>
-    </div>
-
+<section id="sobre">
+    <h2>Sobre Nós</h2>
+    <p>
+        Trabalhamos com móveis planejados de alto padrão, trazendo elegância,
+        funcionalidade e acabamento premium para cada projeto.
+    </p>
 </section>
 
 <section id="servicos">
-    <h2>O que fazemos</h2>
+    <h2>Serviços</h2>
 
     <div class="cards">
         <div class="card">Cozinhas Planejadas</div>
-        <div class="card">Guarda-Roupas Premium</div>
-        <div class="card">Ambientes Personalizados</div>
+        <div class="card">Guarda-Roupas</div>
+        <div class="card">Painéis e Racks</div>
     </div>
 </section>
 
-<section id="galeria">
-    <h2>Nossos Projetos</h2>
-
-    <div class="galeria">
-        <img src="foto1.jpg">
-        <img src="foto2.jpg">
-        <img src="foto3.jpg">
-    </div>
-</section>
-
-<section id="contato">
-    <h2>Fale com Especialistas</h2>
-    <button onclick="whatsapp()">Chamar no WhatsApp</button>
-</section>
 
 <footer>
-    <p>© 2026 DEEP MÓVEIS PROJETADOS</p>
+    <p>© 2026 Deep Móveis Projetados</p>
 </footer>
 
-<a href="https://wa.me/5583000000000" class="whatsapp">
-    <i class="fab fa-whatsapp"></i>
-</a>
-
-<script>
-function whatsapp(){
-    window.open("https://wa.me/5583000000000","_blank")
-}
-</script>
-
+<script src="script.js"></script>
 </body>
 </html>
