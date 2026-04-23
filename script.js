@@ -1,5 +1,5 @@
 function whatsapp() {
-    let numero = "5583999999999";
+    let numero = "5583986477047";
     let mensagem = "Olá, quero um orçamento!";
     window.open(`https://wa.me/${numero}?text=${encodeURIComponent(mensagem)}`);
 }
