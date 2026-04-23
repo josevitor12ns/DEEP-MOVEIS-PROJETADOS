@@ -4,29 +4,39 @@
     box-sizing: border-box;
 }
 
+/* BASE */
 body {
     font-family: 'Poppins', sans-serif;
     color: #fff;
     overflow-x: hidden;
 }
 
-/* FUNDO */
+/* 🔥 FUNDO DESKTOP */
 body::before {
     content: "";
     position: fixed;
     width: 100%;
     height: 100%;
+    top: 0;
+    left: 0;
+
     background: url("fundo.jpg") no-repeat center;
     background-size: cover;
+
     z-index: -2;
 }
 
+/* 🔥 OVERLAY */
 body::after {
     content: "";
     position: fixed;
     width: 100%;
     height: 100%;
-    background: rgba(0,0,0,0.4);
+    top: 0;
+    left: 0;
+
+    background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.6));
+
     z-index: -1;
 }
 
@@ -34,34 +44,48 @@ body::after {
 header {
     display: flex;
     justify-content: space-between;
-    padding: 20px;
+    align-items: center;
+    padding: 15px 20px;
     background: rgba(0,0,0,0.4);
     backdrop-filter: blur(10px);
 }
 
 header h1 {
-    color: #fff;
-    font-weight: 600;
+    font-size: 22px;
+    letter-spacing: 2px;
 }
 
 /* MENU */
+nav {
+    display: flex;
+}
+
 nav a {
-    margin: 0 15px;
+    margin: 0 12px;
     color: #ccc;
     text-decoration: none;
+    transition: 0.3s;
 }
 
 nav a:hover {
     color: #fff;
 }
 
-/* INSTAGRAM */
+/* BOTÃO INSTAGRAM */
 .insta-btn {
     border: 1px solid #fff;
     padding: 6px 12px;
     border-radius: 20px;
-    text-decoration: none;
     color: #fff;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+/* MENU MOBILE */
+.menu-toggle {
+    display: none;
+    font-size: 25px;
+    cursor: pointer;
 }
 
 /* BANNER */
@@ -73,11 +97,13 @@ nav a:hover {
     align-items: center;
 
     text-align: center;
+    padding: 0 20px;
 }
 
 .banner h2 {
     font-size: 50px;
     max-width: 700px;
+    text-align: center;
 }
 
 .banner p {
@@ -85,6 +111,7 @@ nav a:hover {
     color: #ccc;
 }
 
+/* BOTÃO */
 button {
     margin-top: 20px;
     padding: 12px 30px;
@@ -92,11 +119,16 @@ button {
     background: #fff;
     color: #000;
     cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    transform: scale(1.05);
 }
 
 /* SEÇÕES */
 section {
-    padding: 100px 20px;
+    padding: 80px 20px;
     text-align: center;
 }
 
@@ -110,51 +142,28 @@ section {
 .card {
     padding: 30px;
     border: 1px solid #333;
+    transition: 0.3s;
 }
 
-/* ANIMAÇÃO */
-.fade {
-    opacity: 0;
-    transform: translateY(40px);
-    transition: 1s;
+.card:hover {
+    transform: scale(1.05);
 }
 
-.fade.show {
-    opacity: 1;
-    transform: translateY(0);
+/* FOOTER */
+footer {
+    padding: 20px;
+    text-align: center;
+    background: rgba(0,0,0,0.5);
 }
 
-/* MOBILE */
-.menu-toggle {
-    display: none;
-}
-
+/* 📱 MOBILE PERFEITO */
 @media (max-width: 768px) {
 
-    nav {
-        display: none;
-        flex-direction: column;
-        position: absolute;
-        background: #000;
-        width: 100%;
-        top: 60px;
+    /* 🔥 FUNDO MOBILE (AGORA PERFEITO) */
+    body::before {
+        background: url("fundo-mobile.jpg") no-repeat center;
+        background-size: cover;
     }
-
-    .menu-toggle {
-        display: block;
-    }
-
-    .cards {
-        flex-direction: column;
-    }
-
-    .banner h2 {
-        font-size: 32px;
-    }
-}
-
-/* 📱 AJUSTE PROFISSIONAL MOBILE */
-@media (max-width: 768px) {
 
     /* HEADER */
     header {
@@ -163,19 +172,32 @@ section {
 
     header h1 {
         font-size: 18px;
-        line-height: 22px;
     }
 
     /* BOTÃO INSTAGRAM */
     .insta-btn {
-        padding: 6px 10px;
         font-size: 12px;
-        border-radius: 15px;
+        padding: 5px 10px;
     }
 
     /* MENU */
     nav {
+        display: none;
+        flex-direction: column;
+        position: absolute;
         top: 55px;
+        left: 0;
+        width: 100%;
+        background: #000;
+    }
+
+    nav a {
+        padding: 15px;
+        border-top: 1px solid #222;
+    }
+
+    .menu-toggle {
+        display: block;
     }
 
     /* BANNER */
@@ -198,19 +220,11 @@ section {
         font-size: 14px;
     }
 
-    /* FUNDO AJUSTADO */
-    body::before {
-        background-position: center right;
-        background-size: cover;
-    }
-
-    /* SEÇÕES */
-    section {
-        margin: 10px;
-        padding: 40px 15px;
-    }
-
     /* CARDS */
+    .cards {
+        flex-direction: column;
+    }
+
     .card {
         width: 100%;
     }
