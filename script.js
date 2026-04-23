@@ -1,5 +1,5 @@
 function whatsapp(){
-    window.open("https://wa.me/5583999999999");
+    window.open("https://wa.me/5583986477047");
 }
 
 function toggleMenu(){
