@@ -290,3 +290,135 @@ footer {
         display: none;
     }
 }
+
+/* ================= MOBILE PREMIUM ================= */
+@media (max-width: 768px) {
+
+    /* 🔥 RESET TOTAL MOBILE (REMOVE BUGS) */
+    body::before,
+    body::after {
+        display: none;
+    }
+
+    body {
+        background:
+            linear-gradient(rgba(0,0,0,0.25), rgba(0,0,0,0.4)),
+            url("fundo-mobile.jpg");
+
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-attachment: scroll;
+
+        color: #fff;
+    }
+
+    /* 🔥 HEADER ESTILO APPLE */
+    header {
+        padding: 12px 15px;
+        background: rgba(0,0,0,0.3);
+        backdrop-filter: blur(12px);
+    }
+
+    header h1 {
+        font-size: 18px;
+        letter-spacing: 2px;
+    }
+
+    /* 🔥 ESCONDE MENU PADRÃO */
+    nav {
+        display: none;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    /* 🔥 BANNER CINEMATOGRÁFICO */
+    .banner {
+        height: 100vh;
+        padding: 0 20px;
+        justify-content: center;
+    }
+
+    .banner h2 {
+        font-size: 30px;
+        line-height: 38px;
+        font-weight: 600;
+    }
+
+    .banner p {
+        font-size: 15px;
+        margin-top: 10px;
+        color: #ddd;
+    }
+
+    /* 🔥 BOTÃO PREMIUM */
+    button {
+        padding: 12px 25px;
+        font-size: 14px;
+        border-radius: 30px;
+        background: #fff;
+        color: #000;
+    }
+
+    /* 🔥 SEÇÕES ESTILO APPLE */
+    section {
+        padding: 60px 20px;
+        margin: 0;
+        background: transparent;
+    }
+
+    section h2 {
+        font-size: 26px;
+        margin-bottom: 15px;
+    }
+
+    section p {
+        font-size: 15px;
+        color: #ccc;
+    }
+
+    /* 🔥 CARDS PREMIUM */
+    .cards {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .card {
+        width: 100%;
+        padding: 25px;
+        border-radius: 15px;
+        border: 1px solid rgba(255,255,255,0.1);
+        background: rgba(0,0,0,0.4);
+        backdrop-filter: blur(10px);
+    }
+
+    /* 🔥 BOTÕES FLUTUANTES TOP */
+    .whats-float {
+        width: 60px;
+        height: 60px;
+        font-size: 24px;
+        bottom: 20px;
+        right: 15px;
+
+        box-shadow: 0 10px 30px rgba(0,0,0,0.6);
+    }
+
+    .insta-float {
+        width: 50px;
+        height: 50px;
+        bottom: 90px;
+        right: 15px;
+    }
+
+    /* 🔥 SCROLL SUAVE */
+    html {
+        scroll-behavior: smooth;
+    }
+
+    /* 🔥 MELHORA PERFORMANCE */
+    * {
+        -webkit-tap-highlight-color: transparent;
+    }
+}
