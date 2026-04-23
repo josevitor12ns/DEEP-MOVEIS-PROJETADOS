@@ -1,25 +1,22 @@
-function whatsapp() {
-    let numero = "5583986477047";
-    let mensagem = "Olá, quero um orçamento!";
-    window.open(`https://wa.me/${numero}?text=${encodeURIComponent(mensagem)}`);
+function whatsapp(){
+    window.open("https://wa.me/5583999999999");
 }
 
-function toggleMenu() {
-    let menu = document.getElementById("menu");
-    menu.style.display = menu.style.display === "flex" ? "none" : "flex";
+function toggleMenu(){
+    let menu=document.getElementById("menu");
+    menu.style.display=menu.style.display==="flex"?"none":"flex";
 }
 
-/* ANIMAÇÃO AO ROLAR */
-const elements = document.querySelectorAll(".fade");
+/* ANIMAÇÃO */
+const els=document.querySelectorAll(".fade");
 
-function mostrar() {
-    elements.forEach(el => {
-        let top = el.getBoundingClientRect().top;
-        if (top < window.innerHeight - 100) {
+function show(){
+    els.forEach(el=>{
+        if(el.getBoundingClientRect().top < window.innerHeight-100){
             el.classList.add("show");
         }
     });
 }
 
-window.addEventListener("scroll", mostrar);
-mostrar();
+window.addEventListener("scroll",show);
+show();

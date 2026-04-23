@@ -1,8 +1,9 @@
 *{margin:0;padding:0;box-sizing:border-box}
 
 body{
-    font-family:Arial,sans-serif;
+    font-family:'Poppins',sans-serif;
     color:#fff;
+    overflow-x:hidden;
 }
 
 /* FUNDO PC */
@@ -29,16 +30,18 @@ header{
     align-items:center;
     padding:15px;
     background:rgba(0,0,0,.4);
+    backdrop-filter:blur(10px);
 }
 
-nav{display:flex}
 nav a{
     margin:0 10px;
     color:#ccc;
     text-decoration:none;
 }
 
-.menu-toggle{display:none}
+nav a:hover{color:#fff}
+
+.menu-toggle{display:none;font-size:25px}
 
 /* BANNER */
 .banner{
@@ -51,18 +54,25 @@ nav a{
     padding:20px;
 }
 
-.banner h2{font-size:40px}
+.banner h2{font-size:45px}
 .banner p{margin-top:10px;color:#ccc}
 
+/* BOTÃO */
 button{
     margin-top:20px;
     padding:12px 25px;
-    background:#fff;
     border:none;
+    background:#fff;
+    color:#000;
+    border-radius:30px;
+    cursor:pointer;
+    transition:.3s;
 }
 
+button:hover{transform:scale(1.05)}
+
 /* SEÇÕES */
-section{padding:60px 20px;text-align:center}
+section{padding:70px 20px;text-align:center}
 
 /* CARDS */
 .cards{
@@ -72,14 +82,16 @@ section{padding:60px 20px;text-align:center}
 }
 
 .card{
-    padding:20px;
+    padding:25px;
     border:1px solid #333;
+    border-radius:10px;
+    background:rgba(0,0,0,.4);
 }
 
 /* BOTÕES FLUTUANTES */
 .whats-float,.insta-float{
     position:fixed;
-    right:15px;
+    right:20px;
     border-radius:50%;
     display:flex;
     align-items:center;
@@ -87,27 +99,47 @@ section{padding:60px 20px;text-align:center}
     color:#fff;
     text-decoration:none;
     z-index:999;
+    box-shadow:0 5px 20px rgba(0,0,0,.5);
 }
 
 .whats-float{
     bottom:20px;
-    width:55px;
-    height:55px;
+    width:60px;
+    height:60px;
     background:#25D366;
+    animation:pulse 2s infinite;
 }
 
 .insta-float{
-    bottom:85px;
-    width:45px;
-    height:45px;
+    bottom:95px;
+    width:50px;
+    height:50px;
     background:linear-gradient(45deg,#833ab4,#fd1d1d,#fcb045);
 }
 
-/* 📱 MOBILE (CORRIGIDO) */
+/* ANIMAÇÃO */
+@keyframes pulse{
+    0%{transform:scale(1)}
+    50%{transform:scale(1.1)}
+    100%{transform:scale(1)}
+}
+
+/* SCROLL ANIMATION */
+.fade{
+    opacity:0;
+    transform:translateY(30px);
+    transition:.8s;
+}
+
+.fade.show{
+    opacity:1;
+    transform:translateY(0);
+}
+
+/* MOBILE */
 @media(max-width:768px){
 
-    body::before,
-    body::after{display:none}
+    body::before,body::after{display:none}
 
     body{
         background:
@@ -115,12 +147,9 @@ section{padding:60px 20px;text-align:center}
         url("fundo-mobile.jpg") center/cover no-repeat;
     }
 
-    header{padding:10px}
     nav{display:none}
     .menu-toggle{display:block}
 
-    .banner h2{font-size:26px}
-    .banner p{font-size:14px}
-
+    .banner h2{font-size:28px}
     .cards{flex-direction:column}
 }
