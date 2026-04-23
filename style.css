@@ -152,3 +152,66 @@ section {
         font-size: 32px;
     }
 }
+
+/* 📱 AJUSTE PROFISSIONAL MOBILE */
+@media (max-width: 768px) {
+
+    /* HEADER */
+    header {
+        padding: 10px 15px;
+    }
+
+    header h1 {
+        font-size: 18px;
+        line-height: 22px;
+    }
+
+    /* BOTÃO INSTAGRAM */
+    .insta-btn {
+        padding: 6px 10px;
+        font-size: 12px;
+        border-radius: 15px;
+    }
+
+    /* MENU */
+    nav {
+        top: 55px;
+    }
+
+    /* BANNER */
+    .banner {
+        height: 100vh;
+        padding: 0 15px;
+    }
+
+    .banner h2 {
+        font-size: 28px;
+        line-height: 35px;
+    }
+
+    .banner p {
+        font-size: 14px;
+    }
+
+    button {
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+
+    /* FUNDO AJUSTADO */
+    body::before {
+        background-position: center right;
+        background-size: cover;
+    }
+
+    /* SEÇÕES */
+    section {
+        margin: 10px;
+        padding: 40px 15px;
+    }
+
+    /* CARDS */
+    .card {
+        width: 100%;
+    }
+}
