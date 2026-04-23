@@ -229,3 +229,35 @@ footer {
         width: 100%;
     }
 }
+
+/* 📱 CORREÇÃO TOTAL MOBILE (SEM MEXER NO PC) */
+@media (max-width: 768px) {
+
+    /* 🔥 REMOVE FUNDO FIXO (PROBLEMA PRINCIPAL) */
+    body::before {
+        position: absolute;
+        height: 120vh;
+        background: url("fundo-mobile.jpg") no-repeat center;
+        background-size: cover;
+    }
+
+    /* 🔥 REDUZ ESCURO */
+    body::after {
+        background: linear-gradient(
+            rgba(0,0,0,0.2),
+            rgba(0,0,0,0.4)
+        );
+    }
+
+    /* 🔥 REMOVE EFEITO PESADO NAS SEÇÕES */
+    section {
+        background: transparent;
+        backdrop-filter: none;
+    }
+
+    /* 🔥 MELHORA ROLAGEM */
+    body {
+        background-color: #000;
+    }
+
+}
