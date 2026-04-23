@@ -1,5 +1,5 @@
 function whatsapp(){
-    window.open("https://wa.me/5583986477047");
+    window.open("https://wa.me/5583999999999");
 }
 
 function toggleMenu(){
@@ -20,3 +20,9 @@ function show(){
 
 window.addEventListener("scroll",show);
 show();
+
+/* 🎬 EFEITO CINEMA */
+window.addEventListener("scroll",()=>{
+    let scroll=window.scrollY;
+    document.body.style.backgroundPositionY=-(scroll*0.2)+"px";
+});
