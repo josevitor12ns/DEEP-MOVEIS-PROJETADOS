@@ -1,424 +1,126 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+*{margin:0;padding:0;box-sizing:border-box}
+
+body{
+    font-family:Arial,sans-serif;
+    color:#fff;
 }
 
-/* BASE */
-body {
-    font-family: 'Poppins', sans-serif;
-    color: #fff;
-    overflow-x: hidden;
+/* FUNDO PC */
+body::before{
+    content:"";
+    position:fixed;
+    inset:0;
+    background:url("fundo.jpg") center/cover no-repeat;
+    z-index:-2;
 }
 
-/* 🔥 FUNDO DESKTOP (NÃO MEXI) */
-body::before {
-    content: "";
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-
-    background: url("fundo.jpg") no-repeat center;
-    background-size: cover;
-
-    z-index: -2;
-}
-
-/* OVERLAY */
-body::after {
-    content: "";
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-
-    background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.6));
-
-    z-index: -1;
+body::after{
+    content:"";
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,.5);
+    z-index:-1;
 }
 
 /* HEADER */
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 20px;
-    background: rgba(0,0,0,0.4);
-    backdrop-filter: blur(10px);
+header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:15px;
+    background:rgba(0,0,0,.4);
 }
 
-header h1 {
-    font-size: 22px;
-    letter-spacing: 2px;
+nav{display:flex}
+nav a{
+    margin:0 10px;
+    color:#ccc;
+    text-decoration:none;
 }
 
-/* MENU */
-nav {
-    display: flex;
-}
-
-nav a {
-    margin: 0 12px;
-    color: #ccc;
-    text-decoration: none;
-    transition: 0.3s;
-}
-
-nav a:hover {
-    color: #fff;
-}
-
-/* MENU MOBILE */
-.menu-toggle {
-    display: none;
-    font-size: 25px;
-    cursor: pointer;
-}
+.menu-toggle{display:none}
 
 /* BANNER */
-.banner {
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-
-    padding: 0 20px;
+.banner{
+    height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:20px;
 }
 
-.banner h2 {
-    font-size: 50px;
-    max-width: 700px;
-}
+.banner h2{font-size:40px}
+.banner p{margin-top:10px;color:#ccc}
 
-.banner p {
-    margin-top: 15px;
-    color: #ccc;
-}
-
-/* BOTÃO */
-button {
-    margin-top: 20px;
-    padding: 12px 30px;
-    border: none;
-    background: #fff;
-    color: #000;
-    cursor: pointer;
-    transition: 0.3s;
-}
-
-button:hover {
-    transform: scale(1.05);
+button{
+    margin-top:20px;
+    padding:12px 25px;
+    background:#fff;
+    border:none;
 }
 
 /* SEÇÕES */
-section {
-    padding: 80px 20px;
-    text-align: center;
-}
+section{padding:60px 20px;text-align:center}
 
 /* CARDS */
-.cards {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
+.cards{
+    display:flex;
+    justify-content:center;
+    gap:20px;
 }
 
-.card {
-    padding: 30px;
-    border: 1px solid #333;
-    transition: 0.3s;
+.card{
+    padding:20px;
+    border:1px solid #333;
 }
 
-.card:hover {
-    transform: scale(1.05);
+/* BOTÕES FLUTUANTES */
+.whats-float,.insta-float{
+    position:fixed;
+    right:15px;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:#fff;
+    text-decoration:none;
+    z-index:999;
 }
 
-/* FOOTER */
-footer {
-    padding: 20px;
-    text-align: center;
-    background: rgba(0,0,0,0.5);
+.whats-float{
+    bottom:20px;
+    width:55px;
+    height:55px;
+    background:#25D366;
 }
 
-/* 🔥 BOTÕES FLUTUANTES */
-.insta-float {
-    position: fixed;
-    bottom: 90px;
-    right: 20px;
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-
-    background: linear-gradient(45deg, #833ab4, #fd1d1d, #fcb045);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    color: #fff;
-    font-size: 20px;
-    text-decoration: none;
-
-    box-shadow: 0 5px 20px rgba(0,0,0,0.4);
-    z-index: 999;
+.insta-float{
+    bottom:85px;
+    width:45px;
+    height:45px;
+    background:linear-gradient(45deg,#833ab4,#fd1d1d,#fcb045);
 }
 
-.whats-float {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    width: 55px;
-    height: 55px;
-    border-radius: 50%;
+/* 📱 MOBILE (CORRIGIDO) */
+@media(max-width:768px){
 
-    background: #25D366;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    color: #fff;
-    font-size: 22px;
-    text-decoration: none;
-
-    box-shadow: 0 5px 20px rgba(0,0,0,0.5);
-    z-index: 999;
-}
-
-/* ANIMAÇÃO */
-.whats-float {
-    animation: pulse 2s infinite;
-}
-
-@keyframes pulse {
-    0% { transform: scale(1); }
-    50% { transform: scale(1.08); }
-    100% { transform: scale(1); }
-}
-
-/* 📱 MOBILE ULTRA AJUSTADO */
-@media (max-width: 768px) {
-
-    /* 🔥 FUNDO MOBILE CORRIGIDO */
-    body::before {
-        position: absolute;
-        height: 120vh;
-        background: url("fundo-mobile.jpg") no-repeat center;
-        background-size: cover;
-    }
-
-    /* 🔥 MENOS ESCURO */
-    body::after {
-        background: linear-gradient(
-            rgba(0,0,0,0.2),
-            rgba(0,0,0,0.4)
-        );
-    }
-
-    /* HEADER */
-    header {
-        padding: 10px 15px;
-    }
-
-    header h1 {
-        font-size: 18px;
-    }
-
-    /* MENU */
-    nav {
-        display: none;
-        flex-direction: column;
-        position: absolute;
-        top: 55px;
-        left: 0;
-        width: 100%;
-        background: #000;
-    }
-
-    nav a {
-        padding: 15px;
-        border-top: 1px solid #222;
-    }
-
-    .menu-toggle {
-        display: block;
-    }
-
-    /* BANNER */
-    .banner {
-        height: 100vh;
-        padding: 0 15px;
-    }
-
-    .banner h2 {
-        font-size: 28px;
-        line-height: 35px;
-    }
-
-    .banner p {
-        font-size: 14px;
-    }
-
-    button {
-        padding: 10px 20px;
-        font-size: 14px;
-    }
-
-    /* CARDS */
-    .cards {
-        flex-direction: column;
-    }
-
-    .card {
-        width: 100%;
-    }
-
-    /* 🔥 REMOVE PESO VISUAL */
-    section {
-        background: transparent;
-        backdrop-filter: none;
-    }
-}
-
-/* ❌ ESCONDE BOTÕES NO PC */
-@media (min-width: 769px) {
-    .insta-float,
-    .whats-float {
-        display: none;
-    }
-}
-
-/* ================= MOBILE PREMIUM ================= */
-@media (max-width: 768px) {
-
-    /* 🔥 RESET TOTAL MOBILE (REMOVE BUGS) */
     body::before,
-    body::after {
-        display: none;
-    }
+    body::after{display:none}
 
-    body {
+    body{
         background:
-            linear-gradient(rgba(0,0,0,0.25), rgba(0,0,0,0.4)),
-            url("fundo-mobile.jpg");
-
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-        background-attachment: scroll;
-
-        color: #fff;
+        linear-gradient(rgba(0,0,0,.2),rgba(0,0,0,.4)),
+        url("fundo-mobile.jpg") center/cover no-repeat;
     }
 
-    /* 🔥 HEADER ESTILO APPLE */
-    header {
-        padding: 12px 15px;
-        background: rgba(0,0,0,0.3);
-        backdrop-filter: blur(12px);
-    }
+    header{padding:10px}
+    nav{display:none}
+    .menu-toggle{display:block}
 
-    header h1 {
-        font-size: 18px;
-        letter-spacing: 2px;
-    }
+    .banner h2{font-size:26px}
+    .banner p{font-size:14px}
 
-    /* 🔥 ESCONDE MENU PADRÃO */
-    nav {
-        display: none;
-    }
-
-    .menu-toggle {
-        display: block;
-    }
-
-    /* 🔥 BANNER CINEMATOGRÁFICO */
-    .banner {
-        height: 100vh;
-        padding: 0 20px;
-        justify-content: center;
-    }
-
-    .banner h2 {
-        font-size: 30px;
-        line-height: 38px;
-        font-weight: 600;
-    }
-
-    .banner p {
-        font-size: 15px;
-        margin-top: 10px;
-        color: #ddd;
-    }
-
-    /* 🔥 BOTÃO PREMIUM */
-    button {
-        padding: 12px 25px;
-        font-size: 14px;
-        border-radius: 30px;
-        background: #fff;
-        color: #000;
-    }
-
-    /* 🔥 SEÇÕES ESTILO APPLE */
-    section {
-        padding: 60px 20px;
-        margin: 0;
-        background: transparent;
-    }
-
-    section h2 {
-        font-size: 26px;
-        margin-bottom: 15px;
-    }
-
-    section p {
-        font-size: 15px;
-        color: #ccc;
-    }
-
-    /* 🔥 CARDS PREMIUM */
-    .cards {
-        flex-direction: column;
-        gap: 15px;
-    }
-
-    .card {
-        width: 100%;
-        padding: 25px;
-        border-radius: 15px;
-        border: 1px solid rgba(255,255,255,0.1);
-        background: rgba(0,0,0,0.4);
-        backdrop-filter: blur(10px);
-    }
-
-    /* 🔥 BOTÕES FLUTUANTES TOP */
-    .whats-float {
-        width: 60px;
-        height: 60px;
-        font-size: 24px;
-        bottom: 20px;
-        right: 15px;
-
-        box-shadow: 0 10px 30px rgba(0,0,0,0.6);
-    }
-
-    .insta-float {
-        width: 50px;
-        height: 50px;
-        bottom: 90px;
-        right: 15px;
-    }
-
-    /* 🔥 SCROLL SUAVE */
-    html {
-        scroll-behavior: smooth;
-    }
-
-    /* 🔥 MELHORA PERFORMANCE */
-    * {
-        -webkit-tap-highlight-color: transparent;
-    }
+    .cards{flex-direction:column}
 }
