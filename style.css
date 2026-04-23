@@ -11,7 +11,7 @@ body {
     overflow-x: hidden;
 }
 
-/* 🔥 FUNDO DESKTOP */
+/* 🔥 FUNDO DESKTOP (NÃO MEXI) */
 body::before {
     content: "";
     position: fixed;
@@ -26,7 +26,7 @@ body::before {
     z-index: -2;
 }
 
-/* 🔥 OVERLAY */
+/* OVERLAY */
 body::after {
     content: "";
     position: fixed;
@@ -71,16 +71,6 @@ nav a:hover {
     color: #fff;
 }
 
-/* BOTÃO INSTAGRAM */
-.insta-btn {
-    border: 1px solid #fff;
-    padding: 6px 12px;
-    border-radius: 20px;
-    color: #fff;
-    text-decoration: none;
-    font-size: 14px;
-}
-
 /* MENU MOBILE */
 .menu-toggle {
     display: none;
@@ -95,15 +85,14 @@ nav a:hover {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
     text-align: center;
+
     padding: 0 20px;
 }
 
 .banner h2 {
     font-size: 50px;
     max-width: 700px;
-    text-align: center;
 }
 
 .banner p {
@@ -156,13 +145,77 @@ footer {
     background: rgba(0,0,0,0.5);
 }
 
-/* 📱 MOBILE PERFEITO */
+/* 🔥 BOTÕES FLUTUANTES */
+.insta-float {
+    position: fixed;
+    bottom: 90px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+
+    background: linear-gradient(45deg, #833ab4, #fd1d1d, #fcb045);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    color: #fff;
+    font-size: 20px;
+    text-decoration: none;
+
+    box-shadow: 0 5px 20px rgba(0,0,0,0.4);
+    z-index: 999;
+}
+
+.whats-float {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+
+    background: #25D366;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    color: #fff;
+    font-size: 22px;
+    text-decoration: none;
+
+    box-shadow: 0 5px 20px rgba(0,0,0,0.5);
+    z-index: 999;
+}
+
+/* ANIMAÇÃO */
+.whats-float {
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.08); }
+    100% { transform: scale(1); }
+}
+
+/* 📱 MOBILE ULTRA AJUSTADO */
 @media (max-width: 768px) {
 
-    /* 🔥 FUNDO MOBILE (AGORA PERFEITO) */
+    /* 🔥 FUNDO MOBILE CORRIGIDO */
     body::before {
+        position: absolute;
+        height: 120vh;
         background: url("fundo-mobile.jpg") no-repeat center;
         background-size: cover;
+    }
+
+    /* 🔥 MENOS ESCURO */
+    body::after {
+        background: linear-gradient(
+            rgba(0,0,0,0.2),
+            rgba(0,0,0,0.4)
+        );
     }
 
     /* HEADER */
@@ -172,12 +225,6 @@ footer {
 
     header h1 {
         font-size: 18px;
-    }
-
-    /* BOTÃO INSTAGRAM */
-    .insta-btn {
-        font-size: 12px;
-        padding: 5px 10px;
     }
 
     /* MENU */
@@ -228,36 +275,18 @@ footer {
     .card {
         width: 100%;
     }
-}
 
-/* 📱 CORREÇÃO TOTAL MOBILE (SEM MEXER NO PC) */
-@media (max-width: 768px) {
-
-    /* 🔥 REMOVE FUNDO FIXO (PROBLEMA PRINCIPAL) */
-    body::before {
-        position: absolute;
-        height: 120vh;
-        background: url("fundo-mobile.jpg") no-repeat center;
-        background-size: cover;
-    }
-
-    /* 🔥 REDUZ ESCURO */
-    body::after {
-        background: linear-gradient(
-            rgba(0,0,0,0.2),
-            rgba(0,0,0,0.4)
-        );
-    }
-
-    /* 🔥 REMOVE EFEITO PESADO NAS SEÇÕES */
+    /* 🔥 REMOVE PESO VISUAL */
     section {
         background: transparent;
         backdrop-filter: none;
     }
+}
 
-    /* 🔥 MELHORA ROLAGEM */
-    body {
-        background-color: #000;
+/* ❌ ESCONDE BOTÕES NO PC */
+@media (min-width: 769px) {
+    .insta-float,
+    .whats-float {
+        display: none;
     }
-
 }
