@@ -7,22 +7,51 @@ function toggleMenu(){
     menu.style.display=menu.style.display==="flex"?"none":"flex";
 }
 
-/* ANIMAÇÃO */
-const els=document.querySelectorAll(".fade");
+/* ⭐ AVALIAÇÃO */
+let estrelas=0;
 
-function show(){
-    els.forEach(el=>{
-        if(el.getBoundingClientRect().top < window.innerHeight-100){
-            el.classList.add("show");
-        }
+function setStar(n){
+    estrelas=n;
+    document.querySelectorAll(".estrelas span").forEach((el,i)=>{
+        el.classList.toggle("ativa",i<n);
     });
 }
 
-window.addEventListener("scroll",show);
-show();
+function enviarAvaliacao(){
+    let texto=document.getElementById("comentario").value;
 
-/* 🎬 EFEITO CINEMA */
-window.addEventListener("scroll",()=>{
-    let scroll=window.scrollY;
-    document.body.style.backgroundPositionY=-(scroll*0.2)+"px";
-});
+    if(estrelas===0 || texto===""){
+        alert("Preencha a avaliação!");
+        return;
+    }
+
+    let dados=JSON.parse(localStorage.getItem("avaliacoes"))||[];
+
+    dados.push({estrelas,texto});
+    localStorage.setItem("avaliacoes",JSON.stringify(dados));
+
+    document.getElementById("comentario").value="";
+    setStar(0);
+    carregarAvaliacoes();
+}
+
+function carregarAvaliacoes(){
+    let lista=document.getElementById("lista-avaliacoes");
+    let dados=JSON.parse(localStorage.getItem("avaliacoes"))||[];
+
+    lista.innerHTML="";
+
+    dados.reverse().forEach(av=>{
+        let div=document.createElement("div");
+        div.className="avaliacao-item";
+
+        div.innerHTML=`
+        <div class="stars">${"★".repeat(av.estrelas)}</div>
+        <p>${av.texto}</p>
+        `;
+
+        lista.appendChild(div);
+    });
+}
+
+carregarAvaliacoes();

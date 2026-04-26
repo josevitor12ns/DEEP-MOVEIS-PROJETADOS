@@ -4,10 +4,9 @@ body{
     font-family:'Poppins',sans-serif;
     color:#fff;
     overflow-x:hidden;
-    transition:background-position .2s linear;
 }
 
-/* FUNDO PC */
+/* FUNDO */
 body::before{
     content:"";
     position:fixed;
@@ -44,11 +43,10 @@ nav a{
 .banner{
     height:100vh;
     display:flex;
-    flex-direction:column;
     justify-content:center;
     align-items:center;
+    flex-direction:column;
     text-align:center;
-    padding:20px;
 }
 
 .banner h2{font-size:45px}
@@ -75,23 +73,59 @@ section{padding:70px 20px;text-align:center}
 }
 
 .card{
-    padding:25px;
+    padding:20px;
     border:1px solid #333;
     border-radius:10px;
     background:rgba(0,0,0,.4);
 }
 
-/* BOTÕES */
+/* ⭐ AVALIAÇÃO */
+.avaliacao-box{
+    max-width:400px;
+    margin:20px auto;
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+}
+
+.estrelas span{
+    font-size:30px;
+    cursor:pointer;
+    color:#555;
+}
+
+.estrelas span.ativa{
+    color:gold;
+}
+
+textarea{
+    padding:10px;
+    border:none;
+    border-radius:10px;
+}
+
+.avaliacao-item{
+    background:rgba(0,0,0,.4);
+    padding:15px;
+    margin:10px auto;
+    max-width:400px;
+    border-radius:10px;
+}
+
+.avaliacao-item .stars{
+    color:gold;
+}
+
+/* BOTÕES FLUTUANTES */
 .whats-float,.insta-float{
     position:fixed;
     right:20px;
     border-radius:50%;
     display:flex;
-    align-items:center;
     justify-content:center;
+    align-items:center;
     color:#fff;
     text-decoration:none;
-    z-index:999;
 }
 
 .whats-float{
@@ -102,25 +136,10 @@ section{padding:70px 20px;text-align:center}
 }
 
 .insta-float{
-    bottom:95px;
+    bottom:90px;
     width:50px;
     height:50px;
     background:linear-gradient(45deg,#833ab4,#fd1d1d,#fcb045);
-}
-
-.whats-float i,
-.insta-float i{font-size:24px}
-
-/* ANIMAÇÃO */
-.fade{
-    opacity:0;
-    transform:translateY(30px);
-    transition:.8s;
-}
-
-.fade.show{
-    opacity:1;
-    transform:translateY(0);
 }
 
 /* MOBILE */
@@ -128,10 +147,6 @@ section{padding:70px 20px;text-align:center}
 
     body::before{
         background:url("fundo-mobile.jpg") center/cover no-repeat;
-    }
-
-    body::after{
-        background:rgba(0,0,0,.4);
     }
 
     nav{display:none}

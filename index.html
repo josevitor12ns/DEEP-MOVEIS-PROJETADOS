@@ -7,23 +7,20 @@
 
 <link rel="stylesheet" href="style.css">
 
-<!-- Fonte -->
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
-
-<!-- ÍCONES -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
 </head>
 
 <body>
 
 <header>
-    <h1>DEEP Moveis Projetados</h1>
+    <h1>DEEP</h1>
 
     <nav id="menu">
         <a href="#home">Início</a>
         <a href="#sobre">Sobre</a>
         <a href="#servicos">Serviços</a>
+        <a href="#avaliacoes">Avaliações</a>
         <a href="#contato">Contato</a>
     </nav>
 
@@ -48,6 +45,26 @@
         <div class="card">Guarda-Roupas</div>
         <div class="card">Painéis</div>
     </div>
+</section>
+
+<!-- ⭐ AVALIAÇÕES -->
+<section id="avaliacoes" class="fade">
+    <h2>Avaliações dos Clientes</h2>
+
+    <div class="avaliacao-box">
+        <div class="estrelas">
+            <span onclick="setStar(1)">★</span>
+            <span onclick="setStar(2)">★</span>
+            <span onclick="setStar(3)">★</span>
+            <span onclick="setStar(4)">★</span>
+            <span onclick="setStar(5)">★</span>
+        </div>
+
+        <textarea id="comentario" placeholder="Deixe seu comentário..."></textarea>
+        <button onclick="enviarAvaliacao()">Enviar Avaliação</button>
+    </div>
+
+    <div id="lista-avaliacoes"></div>
 </section>
 
 <section id="contato" class="fade">
