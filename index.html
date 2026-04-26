@@ -27,18 +27,18 @@
     <div class="menu-toggle" onclick="toggleMenu()">☰</div>
 </header>
 
-<section id="home" class="banner fade">
+<section id="home" class="banner">
     <h2>Design que transforma ambientes</h2>
     <p>Móveis planejados de alto padrão</p>
     <button onclick="whatsapp()">Solicitar Orçamento</button>
 </section>
 
-<section id="sobre" class="fade">
+<section id="sobre">
     <h2>Sobre</h2>
     <p>Projetos exclusivos com acabamento premium.</p>
 </section>
 
-<section id="servicos" class="fade">
+<section id="servicos">
     <h2>Serviços</h2>
     <div class="cards">
         <div class="card">Cozinhas</div>
@@ -48,8 +48,10 @@
 </section>
 
 <!-- ⭐ AVALIAÇÕES -->
-<section id="avaliacoes" class="fade">
+<section id="avaliacoes">
     <h2>Avaliações dos Clientes</h2>
+
+    <h3 id="media">⭐ 0 (0 avaliações)</h3>
 
     <div class="avaliacao-box">
         <div class="estrelas">
@@ -67,7 +69,7 @@
     <div id="lista-avaliacoes"></div>
 </section>
 
-<section id="contato" class="fade">
+<section id="contato">
     <h2>Contato</h2>
     <button onclick="whatsapp()">Falar no WhatsApp</button>
 </section>
@@ -76,7 +78,7 @@
     <p>© 2026 Deep</p>
 </footer>
 
-<!-- BOTÕES FLUTUANTES -->
+<!-- BOTÕES -->
 <a href="https://www.instagram.com/deepmoveis" target="_blank" class="insta-float">
     <i class="fab fa-instagram"></i>
 </a>
@@ -84,6 +86,29 @@
 <a href="https://wa.me/5583999999999" target="_blank" class="whats-float">
     <i class="fab fa-whatsapp"></i>
 </a>
+
+<!-- 🔥 FIREBASE -->
+<script type="module">
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
+import { getFirestore, addDoc, collection, getDocs } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
+
+const firebaseConfig = {
+  apiKey: "AIzaSyDwX9QpKnrGzMrYEg8jUp1yA3HI8-m3wKI",
+  authDomain: "deep-moveis.firebaseapp.com",
+  projectId: "deep-moveis",
+  storageBucket: "deep-moveis.firebasestorage.app",
+  messagingSenderId: "247810495338",
+  appId: "1:247810495338:web:9d3128ae3d986eef9f8b13"
+};
+
+const app = initializeApp(firebaseConfig);
+const db = getFirestore(app);
+
+window.db = db;
+window.addDoc = addDoc;
+window.collection = collection;
+window.getDocs = getDocs;
+</script>
 
 <script src="script.js"></script>
 </body>

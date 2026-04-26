@@ -7,51 +7,67 @@ function toggleMenu(){
     menu.style.display=menu.style.display==="flex"?"none":"flex";
 }
 
-/* ⭐ AVALIAÇÃO */
-let estrelas=0;
+/* ⭐ AVALIAÇÃO ONLINE */
+let estrelas = 0;
 
 function setStar(n){
-    estrelas=n;
+    estrelas = n;
     document.querySelectorAll(".estrelas span").forEach((el,i)=>{
-        el.classList.toggle("ativa",i<n);
+        el.classList.toggle("ativa", i < n);
     });
 }
 
-function enviarAvaliacao(){
-    let texto=document.getElementById("comentario").value;
+async function enviarAvaliacao(){
+    let texto = document.getElementById("comentario").value;
 
-    if(estrelas===0 || texto===""){
-        alert("Preencha a avaliação!");
+    if(estrelas === 0 || texto === ""){
+        alert("Preencha tudo!");
         return;
     }
 
-    let dados=JSON.parse(localStorage.getItem("avaliacoes"))||[];
-
-    dados.push({estrelas,texto});
-    localStorage.setItem("avaliacoes",JSON.stringify(dados));
+    await addDoc(collection(db, "avaliacoes"), {
+        estrelas,
+        texto,
+        data: new Date()
+    });
 
     document.getElementById("comentario").value="";
     setStar(0);
+
     carregarAvaliacoes();
 }
 
-function carregarAvaliacoes(){
-    let lista=document.getElementById("lista-avaliacoes");
-    let dados=JSON.parse(localStorage.getItem("avaliacoes"))||[];
+async function carregarAvaliacoes(){
+    let lista = document.getElementById("lista-avaliacoes");
+    lista.innerHTML = "Carregando...";
 
-    lista.innerHTML="";
+    let querySnapshot = await getDocs(collection(db, "avaliacoes"));
 
-    dados.reverse().forEach(av=>{
-        let div=document.createElement("div");
-        div.className="avaliacao-item";
+    let total = 0;
+    let count = 0;
 
-        div.innerHTML=`
-        <div class="stars">${"★".repeat(av.estrelas)}</div>
-        <p>${av.texto}</p>
+    lista.innerHTML = "";
+
+    querySnapshot.forEach(doc=>{
+        let av = doc.data();
+
+        total += av.estrelas;
+        count++;
+
+        let div = document.createElement("div");
+        div.className = "avaliacao-item";
+
+        div.innerHTML = `
+            <div class="stars">${"★".repeat(av.estrelas)}</div>
+            <p>${av.texto}</p>
         `;
 
         lista.appendChild(div);
     });
+
+    let media = count ? (total/count).toFixed(1) : 0;
+
+    document.getElementById("media").innerText = `⭐ ${media} (${count} avaliações)`;
 }
 
 carregarAvaliacoes();
